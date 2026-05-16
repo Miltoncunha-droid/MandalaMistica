@@ -88,6 +88,10 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--dusty);
     margin-bottom: 10px;
+    max-width: 100%;
+    overflow: visible;
+    word-break: break-word;
+    white-space: normal;
   }
   .label--gold { color: var(--gold); }
   .label--terra { color: var(--mauve); }
@@ -163,7 +167,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
   .hero {
     background: var(--navy-d);
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     padding: 76px 0 88px;
     min-height: 92vh;
     display: flex; align-items: center;
@@ -236,7 +240,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     border-radius: 4px;
     padding: 36px 28px;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
   }
   .product-box::before {
     content: '';
@@ -331,7 +335,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
   /* ============================================================
      AUTHORITY — same layout as ruptura21 v3
      ============================================================ */
-  .aut-s { background: var(--navy-d); position: relative; overflow: hidden; }
+  .aut-s { background: var(--navy-d); position: relative; overflow: clip; }
 
   .aut-inner {
     display: grid;
@@ -424,7 +428,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     border-radius: 4px; padding: 48px 28px 40px;
     text-align: center; position: relative;
     background: var(--navy-lt);
-    overflow: hidden;
+    overflow: clip;
     margin: 0 16px;
   }
   @media (min-width: 480px) { .price-box { margin: 0; } }
