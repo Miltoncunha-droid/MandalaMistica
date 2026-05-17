@@ -89,7 +89,6 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     color: var(--dusty);
     margin-bottom: 10px;
     max-width: 100%;
-    overflow: visible;
     word-break: break-word;
     white-space: normal;
   }
@@ -240,7 +239,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     border-radius: 4px;
     padding: 36px 28px;
     position: relative;
-    overflow: clip;
+    overflow: hidden;
   }
   .product-box::before {
     content: '';
@@ -255,17 +254,8 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
   .areas-s { background: var(--navy); }
 
   /* decorative large background letter */
-  .bg-letter {
-    position: absolute; pointer-events: none;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 320px; font-weight: 300;
-    color: rgba(178,199,203,.04);
-    line-height: 1; letter-spacing: -0.05em;
-    user-select: none;
-    top: -30px; right: -20px;
-  }
 
-  .areas-grid {
+.areas-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -335,7 +325,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
   /* ============================================================
      AUTHORITY — same layout as ruptura21 v3
      ============================================================ */
-  .aut-s { background: var(--navy-d); position: relative; overflow: clip; }
+  .aut-s { background: var(--navy-d); position: relative; overflow: hidden; }
 
   .aut-inner {
     display: grid;
@@ -428,7 +418,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     border-radius: 4px; padding: 48px 28px 40px;
     text-align: center; position: relative;
     background: var(--navy-lt);
-    overflow: clip;
+    overflow: hidden;
     margin: 0 16px;
   }
   @media (min-width: 480px) { .price-box { margin: 0; } }
@@ -791,7 +781,6 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
      ====================================================== -->
 
 <section class="s areas-s" style="position:relative; overflow:hidden;">
-  <div class="bg-letter">M</div>
   <div class="wrap">
     <div class="tc rv">
       <span class="label">as 12 áreas analisadas</span>
@@ -936,7 +925,6 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
      ====================================================== -->
 
 <section class="s aut-s">
-  <div class="bg-letter" style="top:auto; bottom:-40px; left:-20px; right:auto; font-size:260px;">N</div>
   <div class="wrap">
     <div class="tc rv">
       <span class="label">quem vai conduzir</span>
