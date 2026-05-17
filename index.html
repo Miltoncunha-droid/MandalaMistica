@@ -167,7 +167,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
   .hero {
     background: var(--navy-d);
     position: relative;
-    overflow: clip;
+    overflow: hidden;
     padding: 76px 0 88px;
     min-height: 92vh;
     display: flex; align-items: center;
@@ -631,7 +631,7 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 600px; height: 600px;
-    opacity: 0.07;
+    opacity: 0.04;
     pointer-events: none;
     animation: slowRotate 60s linear infinite;
   }
@@ -677,7 +677,6 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     <circle cx="300" cy="300" r="220" stroke="rgba(178,199,203,1)" stroke-width="0.6"/>
     <circle cx="300" cy="300" r="160" stroke="rgba(178,199,203,1)" stroke-width="0.6"/>
     <circle cx="300" cy="300" r="100" stroke="rgba(178,199,203,1)" stroke-width="0.6"/>
-    <circle cx="300" cy="300" r="40"  stroke="rgba(178,199,203,1)" stroke-width="0.6"/>
     <line x1="20"  y1="300" x2="580" y2="300" stroke="rgba(178,199,203,1)" stroke-width="0.5"/>
     <line x1="300" y1="20"  x2="300" y2="580" stroke="rgba(178,199,203,1)" stroke-width="0.5"/>
     <line x1="102" y1="102" x2="498" y2="498" stroke="rgba(178,199,203,1)" stroke-width="0.4"/>
@@ -1105,7 +1104,9 @@ src="https://www.facebook.com/tr?id=1432767991485511&ev=PageView&noscript=1"/></
     const s = document.createElement('div');
     s.className = 'star';
     s.style.left = Math.random() * 100 + '%';
-    s.style.top  = Math.random() * 100 + '%';
+    // Avoid central 35-65% vertical zone where text lives
+    const zone = Math.random() < 0.5 ? Math.random() * 32 : 68 + Math.random() * 32;
+    s.style.top = zone + '%';
     s.style.setProperty('--dur',   (2 + Math.random() * 4) + 's');
     s.style.setProperty('--delay', (Math.random() * 4) + 's');
     const size = Math.random() > 0.8 ? 3 : 2;
